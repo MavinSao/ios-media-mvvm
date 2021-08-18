@@ -14,6 +14,9 @@
 		D817F57226CB4A19006FFBE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D817F57026CB4A19006FFBE1 /* Main.storyboard */; };
 		D817F57426CB4A1B006FFBE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D817F57326CB4A1B006FFBE1 /* Assets.xcassets */; };
 		D817F57726CB4A1B006FFBE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D817F57526CB4A1B006FFBE1 /* LaunchScreen.storyboard */; };
+		D824BC2726CCAD080021F8C9 /* CustomPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D824BC2626CCAD080021F8C9 /* CustomPopup.storyboard */; };
+		D824BC2A26CCAF1D0021F8C9 /* LogoutCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824BC2926CCAF1D0021F8C9 /* LogoutCustomViewController.swift */; };
+		D824BC2E26CCAFF80021F8C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824BC2D26CCAFF80021F8C9 /* ProfileViewController.swift */; };
 		D8990CBE26CB5759006760D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8990CBD26CB5759006760D3 /* LoginViewController.swift */; };
 		D8990CC226CB5B0F006760D3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8990CC126CB5B0F006760D3 /* RegisterViewController.swift */; };
 		D8990CCB26CB6794006760D3 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8990CC926CB6794006760D3 /* CardTableViewCell.swift */; };
@@ -44,6 +47,9 @@
 		D817F57326CB4A1B006FFBE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D817F57626CB4A1B006FFBE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D817F57826CB4A1B006FFBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D824BC2626CCAD080021F8C9 /* CustomPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomPopup.storyboard; sourceTree = "<group>"; };
+		D824BC2926CCAF1D0021F8C9 /* LogoutCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCustomViewController.swift; sourceTree = "<group>"; };
+		D824BC2D26CCAFF80021F8C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D8990CBD26CB5759006760D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8990CC126CB5B0F006760D3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D8990CC926CB6794006760D3 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		D817F56926CB4A19006FFBE1 /* demo-instagram */ = {
 			isa = PBXGroup;
 			children = (
+				D824BC2B26CCAF940021F8C9 /* Profile */,
 				D8990CCF26CBA15E006760D3 /* Helper */,
 				D817F57F26CB4C24006FFBE1 /* AppDelegate */,
 				D8990CC826CB5CDC006760D3 /* Extension */,
@@ -133,6 +140,39 @@
 				D817F56C26CB4A19006FFBE1 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D824BC2526CCACDA0021F8C9 /* Custom Popup */ = {
+			isa = PBXGroup;
+			children = (
+				D824BC2826CCAECF0021F8C9 /* SwiftFile */,
+				D824BC2626CCAD080021F8C9 /* CustomPopup.storyboard */,
+			);
+			path = "Custom Popup";
+			sourceTree = "<group>";
+		};
+		D824BC2826CCAECF0021F8C9 /* SwiftFile */ = {
+			isa = PBXGroup;
+			children = (
+				D824BC2926CCAF1D0021F8C9 /* LogoutCustomViewController.swift */,
+			);
+			path = SwiftFile;
+			sourceTree = "<group>";
+		};
+		D824BC2B26CCAF940021F8C9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D824BC2C26CCAFAA0021F8C9 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D824BC2C26CCAFAA0021F8C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D824BC2D26CCAFF80021F8C9 /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D8990CBB26CB5733006760D3 /* Login */ = {
@@ -228,6 +268,7 @@
 		D8990CCF26CBA15E006760D3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D824BC2526CCACDA0021F8C9 /* Custom Popup */,
 				D8990CD026CBA170006760D3 /* BaseURL.swift */,
 			);
 			path = Helper;
@@ -342,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D824BC2726CCAD080021F8C9 /* CustomPopup.storyboard in Resources */,
 				D817F57726CB4A1B006FFBE1 /* LaunchScreen.storyboard in Resources */,
 				D817F57426CB4A1B006FFBE1 /* Assets.xcassets in Resources */,
 				D817F57226CB4A19006FFBE1 /* Main.storyboard in Resources */,
@@ -400,6 +442,7 @@
 			files = (
 				D8990CBE26CB5759006760D3 /* LoginViewController.swift in Sources */,
 				D8990CEA26CBE768006760D3 /* UserLoginService.swift in Sources */,
+				D824BC2E26CCAFF80021F8C9 /* ProfileViewController.swift in Sources */,
 				D8990CDE26CBD936006760D3 /* UIViewController+Extension.swift in Sources */,
 				D8990CCE26CB77F0006760D3 /* View+Extenstion.swift in Sources */,
 				D8990CCB26CB6794006760D3 /* CardTableViewCell.swift in Sources */,
@@ -415,6 +458,7 @@
 				D8990CDA26CBBE43006760D3 /* RegisterService.swift in Sources */,
 				D817F56D26CB4A19006FFBE1 /* SceneDelegate.swift in Sources */,
 				D8990CD826CBA86D006760D3 /* ResponseUserRegister.swift in Sources */,
+				D824BC2A26CCAF1D0021F8C9 /* LogoutCustomViewController.swift in Sources */,
 				D8990CD626CBA604006760D3 /* RequestUserRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

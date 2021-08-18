@@ -44,7 +44,7 @@
         <!--Login View Controller-->
         <scene sceneID="Hjj-uZ-Nhg">
             <objects>
-                <viewController id="Zcj-ys-yYD" customClass="LoginViewController" customModule="demo_instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewVC" id="Zcj-ys-yYD" customClass="LoginViewController" customModule="demo_instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fGt-df-NYO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginClick:" destination="Zcj-ys-yYD" eventType="touchUpInside" id="GKS-6R-oCg"/>
-                                            <segue destination="GS4-LR-ztA" kind="presentation" modalPresentationStyle="fullScreen" id="NR9-aq-0X7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaW-Iq-Jsm">
@@ -130,7 +129,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H5a-BA-4eF">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GS4-LR-ztA" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBar" automaticallyAdjustsScrollViewInsets="NO" id="GS4-LR-ztA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5xg-ik-jl6"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DYq-Im-sv9">
@@ -277,15 +276,36 @@
             </objects>
             <point key="canvasLocation" x="-93" y="713"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="aUn-VF-Q9v">
             <objects>
-                <viewController id="8aZ-8N-Kb1" sceneMemberID="viewController">
+                <viewController id="8aZ-8N-Kb1" customClass="ProfileViewController" customModule="demo_instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="URD-EY-1vM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbe-uh-AvA">
+                                <rect key="frame" x="157" y="423" width="100" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HOI-S2-Hkp"/>
+                                    <constraint firstAttribute="width" constant="100" id="aH6-ET-oki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.90318106310000001" green="0.90318106310000001" blue="0.90318106310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="8aZ-8N-Kb1" eventType="touchUpInside" id="goo-8y-hk4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ODM-Ej-ASp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jbe-uh-AvA" firstAttribute="centerY" secondItem="URD-EY-1vM" secondAttribute="centerY" id="f6n-56-Vxx"/>
+                            <constraint firstItem="Jbe-uh-AvA" firstAttribute="centerX" secondItem="URD-EY-1vM" secondAttribute="centerX" id="gWX-pZ-ttK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="bBn-KU-99B">
                         <color key="badgeColor" red="0.19515063099999999" green="0.19515063099999999" blue="0.19515063099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -293,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tO-6l-CwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="713"/>
+            <point key="canvasLocation" x="734.78260869565224" y="712.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JdF-fa-lEF">

@@ -18,4 +18,15 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(identifier: identifier) as! Self
     }
+    
+    
+    func popUpVC(withStorybordName storyboard: String, identifier: String) -> UIViewController {
+        let vc = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.providesPresentationContextTransitionStyle = true
+        vc.definesPresentationContext = true
+        return vc
+    }
+    
 }
